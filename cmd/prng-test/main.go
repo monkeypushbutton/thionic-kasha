@@ -54,6 +54,7 @@ func (c *DataCollection) Len() int { return len(c.data) * 8 }
 // http://cacr.uwaterloo.ca/hac/about/chap5.pdf section 5.4.3
 func (c *DataCollection) FirstGolombTest() bool {
 	zeroOneDiff := c.ZeroOneDiff()
+
 	return -1 <= zeroOneDiff && zeroOneDiff <= 1
 }
 
